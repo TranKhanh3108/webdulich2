@@ -91,14 +91,14 @@ textarea {
 }
 
 .logout{
-  background-color: tomato;
+  background-color: red;
 }
 
 .login{
-  background-color: teal;
+  background-color: #000080;
   margin-right: 10px;
 }
 
 .register{
-  background-color: slateblue;
+  background-color: #000080;
 }

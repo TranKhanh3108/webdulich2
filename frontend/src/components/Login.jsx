@@ -32,11 +32,11 @@ export default function Login({ setShowLogin, setCurrentUsername,myStorage }) {
         <span>Xin chào!</span>
       </div>
       <form onSubmit={handleSubmit}>
-        <input autoFocus placeholder="username" ref={usernameRef} />
+        <input autoFocus placeholder="Tên người dùng" ref={usernameRef} />
         <input
           type="password"
           min="6"
-          placeholder="password"
+          placeholder="Mật khẩu"
           ref={passwordRef}
         />
         <button className="loginBtn" type="submit">

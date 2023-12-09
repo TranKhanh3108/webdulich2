@@ -34,12 +34,12 @@ export default function Register({ setShowRegister }) {
         <span>Đăng kí</span>
       </div>
       <form onSubmit={handleSubmit}>
-        <input autoFocus placeholder="username" ref={usernameRef} />
-        <input type="email" placeholder="email" ref={emailRef} />
+        <input autoFocus placeholder="Tên người dùng" ref={usernameRef} />
+        <input type="email" placeholder="Email" ref={emailRef} />
         <input
           type="password"
           min="6"
-          placeholder="password"
+          placeholder="Mật khẩu"
           ref={passwordRef}
         />
         <button className="registerBtn" type="submit">

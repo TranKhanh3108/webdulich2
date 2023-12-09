@@ -1,6 +1,10 @@
 import "./app.css";
-import React from 'react';
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import React from "react";
+import ReactMapGL, {
+  Marker,
+  Popup,
+  NavigationControl,
+} from "react-map-gl";
 import { useEffect, useState } from "react";
 import { Room, Star } from "@material-ui/icons";
 import axios from "axios";
@@ -10,7 +14,9 @@ import Login from "./components/Login";
 
 function App() {
   const myStorage = window.localStorage;
-  const [currentUsername, setCurrentUsername] = useState(myStorage.getItem("user"));
+  const [currentUsername, setCurrentUsername] = useState(
+    myStorage.getItem("user")
+  );
   const [pins, setPins] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState(null);
   const [newPlace, setNewPlace] = useState(null);
@@ -86,17 +92,18 @@ function App() {
         onViewportChange={(viewport) => setViewport(viewport)}
         onDblClick={currentUsername && handleAddClick}
       >
+        <NavigationControl />
         {pins.map((p) => (
           <>
             <Marker
               latitude={p.lat}
               longitude={p.long}
-              offsetLeft={-3.5 * viewport.zoom}
-              offsetTop={-7 * viewport.zoom}
+              offsetLeft={-2 * viewport.zoom}
+              offsetTop={-5 * viewport.zoom}
             >
               <Room
                 style={{
-                  fontSize: 4 * viewport.zoom,
+                  fontSize: 3 * viewport.zoom,
                   color:
                     currentUsername === p.username ? "tomato" : "slateblue",
                   cursor: "pointer",
