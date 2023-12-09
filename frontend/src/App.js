@@ -82,7 +82,7 @@ function App() {
         width="100%"
         height="100%"
         {...viewport}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
+        mapStyle="mapbox://styles/mapbox/outdoors-v12"
         onViewportChange={(viewport) => setViewport(viewport)}
         onDblClick={currentUsername && handleAddClick}
       >
@@ -96,7 +96,7 @@ function App() {
             >
               <Room
                 style={{
-                  fontSize: 7 * viewport.zoom,
+                  fontSize: 4 * viewport.zoom,
                   color:
                     currentUsername === p.username ? "tomato" : "slateblue",
                   cursor: "pointer",
