@@ -18,9 +18,9 @@ function App() {
   const [desc, setDesc] = useState(null);
   const [star, setStar] = useState(0);
   const [viewport, setViewport] = useState({
-    latitude: 47.040182,
-    longitude: 17.071727,
-    zoom: 4,
+    latitude: 21.027216,
+    longitude: 105.853903,
+    zoom: 13,
   });
   const [showRegister, setShowRegister] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -115,17 +115,17 @@ function App() {
                 anchor="left"
               >
                 <div className="card">
-                  <label>Place</label>
+                  <label>Vị trí</label>
                   <h4 className="place">{p.title}</h4>
-                  <label>Review</label>
+                  <label>Bình luận</label>
                   <p className="desc">{p.desc}</p>
-                  <label>Rating</label>
+                  <label>Đánh giá</label>
                   <div className="stars">
                     {Array(p.rating).fill(<Star className="star" />)}
                   </div>
-                  <label>Information</label>
+                  <label>Thông tin</label>
                   <span className="username">
-                    Created by <b>{p.username}</b>
+                    Tạo bởi <b>{p.username}</b>
                   </span>
                   <span className="date">{format(p.createdAt)}</span>
                 </div>
@@ -159,18 +159,18 @@ function App() {
             >
               <div>
                 <form onSubmit={handleSubmit}>
-                  <label>Title</label>
+                  <label>Tiêu đề</label>
                   <input
                     placeholder="Enter a title"
                     autoFocus
                     onChange={(e) => setTitle(e.target.value)}
                   />
-                  <label>Description</label>
+                  <label>Mô tả</label>
                   <textarea
                     placeholder="Say us something about this place."
                     onChange={(e) => setDesc(e.target.value)}
                   />
-                  <label>Rating</label>
+                  <label>Đánh giá</label>
                   <select onChange={(e) => setStar(e.target.value)}>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -179,7 +179,7 @@ function App() {
                     <option value="5">5</option>
                   </select>
                   <button type="submit" className="submitButton">
-                    Add Pin
+                    Thêm thẻ
                   </button>
                 </form>
               </div>
@@ -188,18 +188,18 @@ function App() {
         )}
         {currentUsername ? (
           <button className="button logout" onClick={handleLogout}>
-            Log out
+            Đăng Xuất
           </button>
         ) : (
           <div className="buttons">
             <button className="button login" onClick={() => setShowLogin(true)}>
-              Log in
+              Đăng nhập
             </button>
             <button
               className="button register"
               onClick={() => setShowRegister(true)}
             >
-              Register
+              Đăng kí
             </button>
           </div>
         )}

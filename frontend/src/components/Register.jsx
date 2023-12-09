@@ -31,7 +31,7 @@ export default function Register({ setShowRegister }) {
     <div className="registerContainer">
       <div className="logo">
         <Room className="logoIcon" />
-        <span>LamaPin</span>
+        <span>Đăng kí</span>
       </div>
       <form onSubmit={handleSubmit}>
         <input autoFocus placeholder="username" ref={usernameRef} />
@@ -43,12 +43,12 @@ export default function Register({ setShowRegister }) {
           ref={passwordRef}
         />
         <button className="registerBtn" type="submit">
-          Register
+          Đăng Kí
         </button>
         {success && (
-          <span className="success">Successfull. You can login now!</span>
+          <span className="success">Đăng kí thành công!</span>
         )}
-        {error && <span className="failure">Something went wrong!</span>}
+        {error && <span className="failure">Xin hãy thử lại!</span>}
       </form>
       <Cancel
         className="registerCancel"

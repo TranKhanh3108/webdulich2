@@ -29,7 +29,7 @@ export default function Login({ setShowLogin, setCurrentUsername,myStorage }) {
     <div className="loginContainer">
       <div className="logo">
         <Room className="logoIcon" />
-        <span>LamaPin</span>
+        <span>Xin chào!</span>
       </div>
       <form onSubmit={handleSubmit}>
         <input autoFocus placeholder="username" ref={usernameRef} />
@@ -40,9 +40,9 @@ export default function Login({ setShowLogin, setCurrentUsername,myStorage }) {
           ref={passwordRef}
         />
         <button className="loginBtn" type="submit">
-          Login
+          Đăng Nhập
         </button>
-        {error && <span className="failure">Something went wrong!</span>}
+        {error && <span className="failure">Xin hãy thử lại!</span>}
       </form>
       <Cancel className="loginCancel" onClick={() => setShowLogin(false)} />
     </div>
