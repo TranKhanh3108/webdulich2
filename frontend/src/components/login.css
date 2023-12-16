@@ -1,7 +1,7 @@
 .loginContainer {
-  width: 300px;
+  width: 450px;
   height: 250px;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   background-color: white;
   position: absolute;
@@ -29,11 +29,13 @@
   justify-content: center;
   color: #000080;
   font-weight: 700;
+  padding-bottom: 13px;
 }
 
 .loginBtn {
   border: none;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 10px;
   background-color: #000080;
   color: white;
   cursor: pointer;
