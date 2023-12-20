@@ -215,6 +215,10 @@ section{
     display: inline-block;
     font-size: 16px;
 }
+.nutxemthem:hover{
+  background-color: yellow;
+  color: black;
+}
 .nutxemthem2{
   background-color: #2980b9; 
   border: none;
@@ -226,6 +230,10 @@ section{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+.nutxemthem2:hover{
+  background-color: yellow;
+  color: black;
 }
 .center{
   justify-content: center;
